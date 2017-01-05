@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>button !</title>
+</head>
+
+<body>
+
+
+    <div id="container" align="center">
+        <!-- son au click -->
+        <audio id="beep" src="son/cat-noises.mp3"></audio>
+        <div id="beep"><button class="big-button" data-action="submit" onclick="JouerSon()"></button></div>
+    </div>
+    <!-- fonction qui me fait le son au click -->
+    <script>
+        function JouerSon() {
+            var sound = document.getElementById("beep");
+            sound.play();
+        }
+    </script>
+
+    <div class="shadow"></div>
+    <!-- bouton INPUT -->
+    <!-- <input type="button" name="button" value="click me to !"> -->
+    <script type="text/javascript">
+        $('.big-button').after("#shadow:active");
+    </script>
+
+    <style media="screen">
+        @import url(http://fonts.googleapis.com/css?family=Sansita+One);
+        #container {
+            background-color: #fff;
+        }
+
+        .big-button {
+            cursor: pointer;
+            position: relative;
+            background-image: url("cat.jpg");
+            background-size: 250px;
+            color: #000000;
+            font-family: 'Sansita One', cursive;
+            font-size: 26px;
+            font-weight: 500;
+            //margin: 10px auto;
+            padding: 20px;
+            height: 150px;
+            width: 270px;
+            text-decoration: none;
+            text-transform: capitalize;
+            -webkit-border-radius: 12px;
+            -moz-border-radius: 12px;
+            border-radius: 12px;
+            -webkit-box-shadow: 0px 15px 0px #009933, 0px 10px 25px rgba(0, 0, 0, .5);
+            -moz-box-shadow: 0px 15px 0px #009933, 0px 10px 25px rgba(0, 0, 0, .5);
+            box-shadow: 0px 15px 0px #009933, 0px 10px 25px rgba(0, 0, 0, .5);
+            margin: 50px auto;
+            border-color: #66ff66;
+            border-width: 10px;
+            border-radius: 40px 100px 100px 100px;
+            padding: 20px;
+            /*shadow maison*/
+            /*-webkit-box-shadow: 66px 200px 48px 10px rgba(201, 199, 201, 1);
+            -moz-box-shadow: 66px 200px 48px 10px rgba(201, 199, 201, 1);
+            box-shadow: 66px 200px 48px 10px rgba(201, 199, 201, 1);*/
+        }
+
+        .big-button:active {
+            box-shadow: 0px 3px 0px #33CC33, 0px 3px 6px rgba(0, 0, 0, .9);
+            position: relative;
+            top: 10px;
+        }
+
+        .shadow {
+            background: #000;
+            border-radius: 40px 100px 100px 100px;
+            box-shadow: 0 0 20px 10px #111;
+            height: 120px;
+            width: 270px;
+            opacity: 0.2;
+            margin: 30px auto;
+        }
+
+        .shadow:active {
+            box-shadow: 0px 3px 0px #33CC33, 0px 3px 6px rgba(0, 0, 0, .9);
+            position: relative;
+            top: 10px;
+        }
+    </style>
+
+</body>
+
+</html>
